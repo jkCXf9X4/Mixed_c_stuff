@@ -5,6 +5,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
+
 #include "time_it.h"
 
 // Object used for measuring distance between times
@@ -155,7 +156,7 @@ int time_it_print_results(void *time_it_obj, FILE *stream, char *opt_description
         return -1;
     }
 
-    fprintf(stream, "%s: %s Operations: %i Time/op: %lli nanos, Time: %lli nanos\n",
+    fprintf(stream, "%s: %s Operations: %li Time/op: %li nanos, Time: %li nanos\n",
             __func__, opt_description == NULL ? "" : opt_description, self->operations, self->result_time_per_op, self->result_time);
     return 0;
 }

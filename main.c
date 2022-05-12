@@ -10,6 +10,7 @@
 #include <sys/types.h>
 #include <pthread.h>
 #include <time.h>
+#include <limits.h>
 
 // #include "linked_list.h"
 
@@ -49,7 +50,7 @@ int main(int argc, char *argv[])
 
     int seconds = end_time.tv_sec - start_time.tv_sec;
     int nanos = end_time.tv_nsec - start_time.tv_nsec;
-    printf("Sec %i, n_sec %li\n", seconds, nanos);
+    printf("Sec %i, n_sec %i\n", seconds, nanos);
 
     long time = seconds * SECOND_IN_NANOSECOND + nanos;
 

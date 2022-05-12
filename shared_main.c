@@ -221,7 +221,7 @@ int main(int argc, char *argv[])
 
     free(shared_memory);
 
-    printf("---MUTEX---\n", sum);
+    printf("---MUTEX---\n");
     sum = 0;
     shared_memory = malloc(sizeof(shm_t));
     shared_memory->message.a = 0;

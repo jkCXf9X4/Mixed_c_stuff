@@ -5,6 +5,7 @@
 
 #include "linked_list.h"
 #include "stack.h"
+#include <limits.h>
 
 void *stack_allocator()
 {
@@ -109,8 +110,8 @@ int stack_print(void *stack_obj)
 {
     stack_t *self = stack_obj;
     printf("Debug stack\n");
-    printf("Mem start %p, head %p, item_size %lli\n", self->memory_start, self->head, self->item_size);
-    printf(" Nr of items %lli, Max_nr_of_items %lli, Max_nr_of_items_allocated %lli\n", self->num_of_items, self->max_number_of_items, self->allocation_max_num_of_items);
+    printf("Mem start %p, head %p, item_size %lu\n", self->memory_start, self->head, self->item_size);
+    printf(" Nr of items %lu, Max_nr_of_items %lu, Max_nr_of_items_allocated %lu\n", self->num_of_items, self->max_number_of_items, self->allocation_max_num_of_items);
     for (int i = 0; i < self->num_of_items; i++)
     {
         void *memory = self->memory_start + self->item_size * i;
