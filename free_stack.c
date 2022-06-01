@@ -1,7 +1,7 @@
 
 #include <stdlib.h>
 
-#include "stack.h"
+#include "stack_buffer.h"
 #include "free_stack.h"
 
 // allocator

@@ -1,5 +1,5 @@
 
-
+#pragma once
 
 typedef enum return_status {
     RET_OK = 0,
